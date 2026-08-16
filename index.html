@@ -13,8 +13,8 @@
       content="Exp005 Quest 2 controller-continuity diagnostic. Robot authority is disabled."
     />
     <title>Exp005 · Quest continuity scope</title>
-    <script type="module" crossorigin src="./assets/index-Bm6M9xST.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-QsgI4TNz.css">
+    <script type="module" crossorigin src="./assets/index-xbQ2FYTw.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CyLdlH-W.css">
   </head>
   <body>
     <div id="app">
@@ -33,7 +33,7 @@
         <section class="viewport-card" aria-labelledby="viewport-title">
           <div class="section-heading">
             <div>
-              <p class="section-index">Local WebXR toy</p>
+              <p class="section-index">Local WebXR + transport toy</p>
               <h2 id="viewport-title">Move first. Diagnose second.</h2>
             </div>
             <p class="instruction">
@@ -59,6 +59,46 @@
               <div><dt>Visibility</dt><dd id="visibility-state">—</dd></div>
               <div><dt>Sample rate</dt><dd id="sample-fps">—</dd></div>
               <div><dt>Trace frames</dt><dd id="trace-count">0</dd></div>
+            </dl>
+          </section>
+
+          <section class="transport-card" aria-labelledby="transport-title">
+            <div class="hand-heading">
+              <div>
+                <p class="section-index">EU telemetry</p>
+                <h3 id="transport-title">Direct channel</h3>
+              </div>
+              <span id="transport-state" class="state-label invalid">Disconnected</span>
+            </div>
+            <form id="transport-form" class="transport-fields">
+              <label for="transport-endpoint">Secure WebSocket endpoint</label>
+              <input
+                id="transport-endpoint"
+                type="url"
+                inputmode="url"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="wss://host.example:port/"
+              />
+              <label for="transport-token">Ephemeral session token</label>
+              <input
+                id="transport-token"
+                type="password"
+                autocomplete="off"
+                placeholder="Never saved or traced"
+              />
+              <div class="transport-actions">
+                <button id="connect-transport" type="submit">Connect</button>
+                <button id="disconnect-transport" class="secondary" type="button">Disconnect</button>
+              </div>
+            </form>
+            <dl class="metric-list compact transport-metrics">
+              <div><dt>Send / receive</dt><dd id="transport-rates">— / —</dd></div>
+              <div><dt>Sent / acked</dt><dd id="transport-counts">0 / 0</dd></div>
+              <div><dt>Dropped</dt><dd id="transport-dropped">0</dd></div>
+              <div><dt>Capture age</dt><dd id="transport-capture-age">—</dd></div>
+              <div><dt>Clock RTT ±</dt><dd id="transport-clock">—</dd></div>
+              <div><dt>Buffered</dt><dd id="transport-buffered">0 B</dd></div>
             </dl>
           </section>
 
