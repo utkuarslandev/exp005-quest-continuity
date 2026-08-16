@@ -1,12 +1,14 @@
 {
   "kind": "exp005_browser_webxr_transport_site",
-  "built_at": "2026-08-16T15:49:10+00:00",
+  "built_at": "2026-08-16T16:28:12+00:00",
   "source_branch": "feat/exp005-quest-direct-client",
-  "source_commit": "2dd9028d27689b45ddf3b8e2d63f1db1969f20ce",
+  "source_commit": "5f5abac85aa7fab79e8783b9422943e9b978c1b9",
   "nvidia_isaac_teleop_commit": "e075c8f14dcf8b0ec709c4abb1f9f6bf792a9e04",
   "nvidia_webxr_client_version": "6.3.0-rc4",
   "transport_protocol": "exp005_quest_transport_v1",
   "robot_authority": false,
-  "brev_endpoints": [],
+  "brev_endpoints": [
+    "wss://global.prd.ga.run.brev.nvidia.com:40454/"
+  ],
   "cloudxr_endpoints": []
 }

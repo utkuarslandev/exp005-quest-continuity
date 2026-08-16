@@ -8,9 +8,10 @@ The page:
 - visualizes current WebXR controller poses and analog inputs;
 - detects missing and frozen pose updates;
 - records a bounded downloadable diagnostic trace;
-- optionally connects to an operator-supplied authenticated `wss://` telemetry
-  endpoint without storing its token;
-- contains no embedded Brev, CloudXR, Isaac Sim, press, or robot endpoint;
+- prefills the current non-secret EU `wss://` telemetry endpoint while
+  allowing an operator override and remembering only the endpoint;
+- never stores its ephemeral authentication token;
+- contains no CloudXR, Isaac Sim, press, or robot-control endpoint;
 - has robot authority permanently disabled.
 
 Build provenance is recorded in `deployment.json`. This repository does not
