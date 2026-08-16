@@ -1,0 +1,12 @@
+{
+  "kind": "exp005_browser_webxr_continuity_site",
+  "built_at": "2026-08-16T14:13:27+00:00",
+  "source_branch": "feat/exp005-quest-direct-client",
+  "source_commit": "d1db6208d9ca828e53daaf03c033d5d655d07a24",
+  "nvidia_isaac_teleop_commit": "e075c8f14dcf8b0ec709c4abb1f9f6bf792a9e04",
+  "nvidia_webxr_client_version": "6.3.0-rc4",
+  "robot_authority": false,
+  "brev_endpoints": [],
+  "cloudxr_endpoints": []
+}
+

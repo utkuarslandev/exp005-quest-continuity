@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07131d" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2307131d'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%2361d8dc' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2373df92'/%3E%3Cpath d='M32 5v10M32 49v10M5 32h10M49 32h10' stroke='%238ea5ac' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="Exp005 Quest 2 controller-continuity diagnostic. Robot authority is disabled."
+    />
+    <title>Exp005 · Quest continuity scope</title>
+    <script type="module" crossorigin src="./assets/index-Bm6M9xST.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-QsgI4TNz.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Exp005 / instrument 01</p>
+          <h1>Quest continuity scope</h1>
+        </div>
+        <div class="safety-lock" aria-label="Robot authority disabled">
+          <span class="lock-dot" aria-hidden="true"></span>
+          Robot authority: disabled
+        </div>
+      </header>
+
+      <main class="console-grid">
+        <section class="viewport-card" aria-labelledby="viewport-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-index">Local WebXR toy</p>
+              <h2 id="viewport-title">Move first. Diagnose second.</h2>
+            </div>
+            <p class="instruction">
+              Enter VR, then sweep both Touch controllers immediately. Pull each trigger and squeeze
+              each grip.
+            </p>
+          </div>
+          <div id="xr-viewport" class="xr-viewport" aria-label="WebXR diagnostic viewport"></div>
+          <div class="legend" aria-label="Controller state legend">
+            <span><i class="state-chip fresh"></i>Fresh motion</span>
+            <span><i class="state-chip trigger"></i>Trigger</span>
+            <span><i class="state-chip frozen"></i>Frozen</span>
+            <span><i class="state-chip invalid"></i>Invalid</span>
+          </div>
+        </section>
+
+        <aside class="telemetry-rail" aria-label="Live diagnostic telemetry">
+          <section class="status-card">
+            <p class="section-index">Session</p>
+            <dl class="metric-list">
+              <div><dt>Secure context</dt><dd id="secure-state">Checking</dd></div>
+              <div><dt>WebXR</dt><dd id="webxr-state">Checking</dd></div>
+              <div><dt>Visibility</dt><dd id="visibility-state">—</dd></div>
+              <div><dt>Sample rate</dt><dd id="sample-fps">—</dd></div>
+              <div><dt>Trace frames</dt><dd id="trace-count">0</dd></div>
+            </dl>
+          </section>
+
+          <section class="hand-card" data-hand="left">
+            <div class="hand-heading">
+              <p class="section-index">Left controller</p>
+              <span id="left-state" class="state-label invalid">Absent</span>
+            </div>
+            <dl class="metric-list compact">
+              <div><dt>Pose source</dt><dd id="left-source">—</dd></div>
+              <div><dt>Motion age</dt><dd id="left-age">—</dd></div>
+              <div><dt>Trigger</dt><dd id="left-trigger">0.00</dd></div>
+              <div><dt>Squeeze</dt><dd id="left-squeeze">0.00</dd></div>
+              <div><dt>Changes</dt><dd id="left-changes">0</dd></div>
+            </dl>
+          </section>
+
+          <section class="hand-card" data-hand="right">
+            <div class="hand-heading">
+              <p class="section-index">Right controller</p>
+              <span id="right-state" class="state-label invalid">Absent</span>
+            </div>
+            <dl class="metric-list compact">
+              <div><dt>Pose source</dt><dd id="right-source">—</dd></div>
+              <div><dt>Motion age</dt><dd id="right-age">—</dd></div>
+              <div><dt>Trigger</dt><dd id="right-trigger">0.00</dd></div>
+              <div><dt>Squeeze</dt><dd id="right-squeeze">0.00</dd></div>
+              <div><dt>Changes</dt><dd id="right-changes">0</dd></div>
+            </dl>
+          </section>
+
+          <section class="actions-card">
+            <button id="download-trace" type="button">Download trace</button>
+            <button id="clear-trace" class="secondary" type="button">Clear trace</button>
+            <p id="operator-note" class="operator-note" role="status">
+              This page never connects to a robot.
+            </p>
+          </section>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
