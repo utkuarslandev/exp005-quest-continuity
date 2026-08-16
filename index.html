@@ -13,7 +13,7 @@
       content="Exp005 Quest 2 controller-continuity diagnostic. Robot authority is disabled."
     />
     <title>Exp005 · Quest continuity scope</title>
-    <script type="module" crossorigin src="./assets/index-BQ4QNbqS.js"></script>
+    <script type="module" crossorigin src="./assets/index-DHDZHyXd.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-CyLdlH-W.css">
   </head>
   <body>
@@ -80,14 +80,18 @@
                 spellcheck="false"
                 placeholder="wss://host.example:port/"
               />
-              <label for="transport-token">Ephemeral session token</label>
+              <label for="transport-pairing-code">6-digit pairing code</label>
               <input
-                id="transport-token"
+                id="transport-pairing-code"
                 type="password"
                 inputmode="numeric"
                 autocomplete="one-time-code"
                 enterkeyhint="go"
-                placeholder="32-digit code; never saved or traced"
+                minlength="6"
+                maxlength="6"
+                pattern="[0-9]{6}"
+                required
+                placeholder="6 digits; never saved or traced"
               />
               <div class="transport-actions">
                 <button id="connect-transport" type="submit">Connect</button>
