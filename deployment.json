@@ -1,11 +1,58 @@
 {
-  "kind": "exp005_browser_webxr_transport_site",
-  "built_at": "2026-08-16T18:37:39+00:00",
-  "source_branch": "feat/exp005-quest-direct-client",
-  "source_commit": "326d167be0ca7962041c89c4f4c6c7b053ba34f0",
+  "kind": "exp005_quest_cloudxr_direct_control_site",
+  "built_at": "2026-08-19T06:48:44Z",
+  "source_commit": "99824c82c953e20bc81b34abe33bc6c42168a9b6",
+  "source_checkout": "clean_detached_head",
+  "source_path": "clients/quest/isaac_teleop_webxr",
+  "source_package_lock_sha256": "f61dd5034ef4a1f225ae4b3abe9a53e7024c891478bbdc87fcc9e13f5d680c76",
   "nvidia_isaac_teleop_commit": "e075c8f14dcf8b0ec709c4abb1f9f6bf792a9e04",
+  "nvidia_isaac_teleop_subtree": "331bbb93f0b7ce8aadbcfb68c7359fd71a7d89ba",
   "nvidia_webxr_client_version": "6.3.0-rc4",
-  "transport_protocol": "exp005_quest_transport_v1",
+  "cloudxr_archive_sha256": "16267bc8dd4d4d8daf6ec7aa03f99899d955ad5d9ff757854326326a7a44b31c",
+  "qdc1_fixture_sha256": "6675c1d2517359c7ea374bdbf79b46ee4ac7e11b17a1f7abec39dfd549e851ba",
+  "build": {
+    "node_version": "v24.16.0",
+    "npm_version": "11.13.0",
+    "install_command": "npm ci",
+    "build_command": "npm run build",
+    "runtime_file_count": 29,
+    "runtime_manifest": "runtime-files.sha256",
+    "runtime_manifest_sha256": "328111620c9c554ed865ec41e09aec6acb87b7130e6dc0dacb1b496a6c0db425",
+    "private_release_manifest_sha256": "ea7dde92a086d3626803ff8b2fc5b4b68f36943b33d53e0e3454acf10899b3ef"
+  },
+  "offline_verification": {
+    "status": "offline_ready",
+    "implementation_commit": "99824c82c953e20bc81b34abe33bc6c42168a9b6",
+    "evidence_manifest_sha256": "e8f6c8badb169b4f93f659b673ffffc2f9a41b55d4662d1bad84110a244cb7d0",
+    "robot_authority": false
+  },
+  "client_build_verification": {
+    "jest_suites": 13,
+    "jest_tests": 125,
+    "typecheck": "passed",
+    "format_check": "passed",
+    "production_build": "passed_with_two_size_warnings",
+    "npm_audit": {
+      "moderate": 4,
+      "high": 1,
+      "breaking_fix_applied": false
+    }
+  },
+  "compatible_server": {
+    "implementation_commit": "99824c82c953e20bc81b34abe33bc6c42168a9b6",
+    "binary_sha256": "e92824f8365454a7ed599674c9442fdcd4b99c6a5654beedb8d796f22a78df6a"
+  },
+  "direct_control": {
+    "control_plane": "wss_control_v1",
+    "public_wss_url": "wss://global.prd.ga.run.brev.nvidia.com:40454/",
+    "rtc_data_channel": {
+      "label": "poses",
+      "ordered": false,
+      "max_retransmits": 0
+    },
+    "browser_wire_format": "QDC1",
+    "forward_wire_format": "QDF1"
+  },
   "operator_authentication": {
     "kind": "six_digit_pairing",
     "code_ttl_seconds": 120,
@@ -14,9 +61,23 @@
     "session_ticket_storage": "same_tab_memory_only",
     "maximum_reconnect_attempts": 3
   },
+  "legal_sha256": {
+    "private_source_legal_manifest": "a43c9dc1a789d5010916fc5ed7c878a3ec26b9a9ebb652552bb996cf1eff8ce9",
+    "NOTICE.md": "5a20c000e6300100cfc0cd1a403e60aeb140371307ad06b9012c8af57fa23ef9",
+    "UPSTREAM.md": "6be24ca1853e9af45ea543f84bf55a754aa8e61e1d13ef57421504e0cca083f2",
+    "LICENSES/IsaacTeleop-Apache-2.0.md": "756005f963846334943e8bfc08ef98cd254257d8467ac7a7ffd42a1be262f442",
+    "LICENSES/NVIDIA-CloudXR-SDK.txt": "9f11cac7ee5efc9dee6b572a34c88a764e5d4f9440129677f993f76cc6b60914",
+    "LICENSES/HEROICONS_LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+    "LICENSES/WebXR-Input-Profiles-Assets-MIT.md": "0ef0c87e8ffdd0681f332dc3b39f284dee2166d1f853fabc3853884fe81a6f30",
+    "LICENSES/IWER-MIT.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  "cloudxr_endpoints": [],
   "robot_authority": false,
-  "brev_endpoints": [
-    "wss://global.prd.ga.run.brev.nvidia.com:40454/"
-  ],
-  "cloudxr_endpoints": []
+  "live_validation": {
+    "quest_to_brev_rtc": false,
+    "fail_closed_transition_matrix": false,
+    "cloudxr_coexistence": false,
+    "server_ghost_zero_action": false,
+    "franka_six_axis_authority": false
+  }
 }

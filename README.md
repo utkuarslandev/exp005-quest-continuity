@@ -1,23 +1,28 @@
-# Exp005 Quest continuity diagnostic
+# Exp005 Quest CloudXR direct-control client
 
-This repository contains only the compiled static artifact for the Exp005
-Quest 2 controller-continuity and robot-disabled direct-transport gates.
+This repository contains the compiled static Quest client for the Exp005
+robot-disabled live transport gates. The runtime bytes were built from the
+accepted offline implementation commit recorded in `deployment.json`.
 
-The page:
+The page combines:
 
-- visualizes current WebXR controller poses and analog inputs;
-- detects missing and frozen pose updates;
-- records a bounded downloadable diagnostic trace;
-- prefills the current non-secret EU `wss://` telemetry endpoint while
-  allowing an operator override and remembering only the endpoint;
-- accepts an exactly six-digit, two-minute, single-use pairing code;
-- retains the issued one-hour session ticket only in same-tab memory for three
-  bounded reconnect attempts;
-- never stores the pairing code or session ticket in URLs, browser storage,
-  downloadable traces, or diagnostics;
-- contains no CloudXR, Isaac Sim, press, or robot-control endpoint;
-- has robot authority permanently disabled.
+- NVIDIA CloudXR WebXR video and headset tracking;
+- independent six-digit bootstrap pairing over secure WebSocket;
+- an unordered, zero-retransmit WebRTC `poses` data channel carrying QDC1
+  controller frames; and
+- bounded HUD diagnostics for buffered-frame drops, forwarding drops, and
+  reconnect attempts.
 
-Build provenance is recorded in `deployment.json`. This repository does not
-contain the press-tending project, credentials, experiment evidence, or robot
-control source.
+The published endpoint is the reviewed public Brev gateway mapping compiled
+into the client. Pairing codes, session tickets, nonces, SDP, ICE candidates,
+TURN credentials, and private network mappings are not stored in this
+repository.
+
+Robot authority is false. Publication does not establish a physical
+Quest-to-Brev RTC pass, CloudXR coexistence pass, server-ghost pass, or Franka
+authority. Those gates remain pending under the governing Exp005 plan.
+
+Build provenance and safety boundaries are in `deployment.json`; exact runtime
+hashes are in `runtime-files.sha256`. NVIDIA and third-party terms are retained
+in `NOTICE.md`, `THIRD_PARTY_NOTICES.md`, the emitted bundle notice files, and
+`LICENSES/`.
