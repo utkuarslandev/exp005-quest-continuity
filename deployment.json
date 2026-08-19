@@ -1,8 +1,8 @@
 {
   "kind": "exp005_quest_cloudxr_direct_control_site",
-  "built_at": "2026-08-19T06:48:44Z",
-  "source_commit": "99824c82c953e20bc81b34abe33bc6c42168a9b6",
-  "source_checkout": "clean_detached_head",
+  "built_at": "2026-08-19T14:35:32Z",
+  "source_commit": "4a050f38ce0144b28af07736a604f7173b6b4ca1",
+  "source_checkout": "clean_branch_head",
   "source_path": "clients/quest/isaac_teleop_webxr",
   "source_package_lock_sha256": "f61dd5034ef4a1f225ae4b3abe9a53e7024c891478bbdc87fcc9e13f5d680c76",
   "nvidia_isaac_teleop_commit": "e075c8f14dcf8b0ec709c4abb1f9f6bf792a9e04",
@@ -17,18 +17,18 @@
     "build_command": "npm run build",
     "runtime_file_count": 29,
     "runtime_manifest": "runtime-files.sha256",
-    "runtime_manifest_sha256": "328111620c9c554ed865ec41e09aec6acb87b7130e6dc0dacb1b496a6c0db425",
-    "private_release_manifest_sha256": "ea7dde92a086d3626803ff8b2fc5b4b68f36943b33d53e0e3454acf10899b3ef"
+    "runtime_manifest_sha256": "cf1167a27852f2a21a248240b06229b7709067c341d4d9225f649ede7f3c6b02",
+    "private_release_manifest_sha256": "b8cfb91aeb9b86b18c9906d89f2eaec32d24cd593815e1d38710d66e39a72fd4"
   },
   "offline_verification": {
     "status": "offline_ready",
-    "implementation_commit": "99824c82c953e20bc81b34abe33bc6c42168a9b6",
-    "evidence_manifest_sha256": "e8f6c8badb169b4f93f659b673ffffc2f9a41b55d4662d1bad84110a244cb7d0",
+    "implementation_commit": "4a050f38ce0144b28af07736a604f7173b6b4ca1",
+    "evidence_manifest_sha256": "8e40a7ca0dd9be5185b86432889f97125721ec3bbc468e28993d7e4e1055e3cb",
     "robot_authority": false
   },
   "client_build_verification": {
     "jest_suites": 13,
-    "jest_tests": 125,
+    "jest_tests": 126,
     "typecheck": "passed",
     "format_check": "passed",
     "production_build": "passed_with_two_size_warnings",
@@ -39,12 +39,12 @@
     }
   },
   "compatible_server": {
-    "implementation_commit": "99824c82c953e20bc81b34abe33bc6c42168a9b6",
-    "binary_sha256": "e92824f8365454a7ed599674c9442fdcd4b99c6a5654beedb8d796f22a78df6a"
+    "implementation_commit": "4a050f38ce0144b28af07736a604f7173b6b4ca1",
+    "binary_sha256": "f4c605c74b57fe02e988245f249331532b18162cbd4d49f498a76b59f3c6598e"
   },
   "direct_control": {
     "control_plane": "wss_control_v1",
-    "public_wss_url": "wss://global.prd.ga.run.brev.nvidia.com:40454/",
+    "public_wss_url": "wss://global.prd.ga.run.brev.nvidia.com:40454/control-v1",
     "rtc_data_channel": {
       "label": "poses",
       "ordered": false,
